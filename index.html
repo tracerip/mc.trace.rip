@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mc.trace.rip | Anarchy Server</title>
+    <meta name="description" content="Pure Vanilla. Absolute Anarchy. mc.trace.rip Minecraft Server.">
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="noise-overlay"></div>
+
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">trace.rip</a>
+            <div class="nav-links">
+                <a href="#info">Info</a>
+                <a href="#funding">Help Fund</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <canvas id="particles-canvas"></canvas>
+        <div class="container hero-content">
+            
+            <h1 data-aos="zoom-in" data-aos-duration="1000">
+                Pure Vanilla.<br><span class="gradient-text">Absolute Anarchy.</span>
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="200" class="hero-desc">
+                A neverending world with no rules. No admins. No resets.<br>
+                The history is written by the players.
+            </p>
+
+            <div class="btn-copy" onclick="copyIp('mc.trace.rip')" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-regular fa-copy"></i>
+                <span id="ip-text">mc.trace.rip</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="info">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <h2>Server Information</h2>
+                <p>trace.rip is a Minecraft server that promises its players vanilla survival gameplay with unlimited PvP.</p>
+            </div>
+
+            <div class="spotlight-group" id="spotlight-grid">
+
+                <div class="card bento-wide" data-aos="fade-up">
+                    <div class="card-inner"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div>
+                            <h3>The World</h3>
+                            <p>The map has never been reset.<br>
+                            Current Size: <strong>4+ GB</strong> with over <strong>24</strong> unique players.<br>
+                            <span class="sub-text">(Map age: January 14, 2026 at 5:50:03.461 AM UTC)</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-inner"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fa-solid fa-skull"></i></div>
+                        <h3>No Rules</h3>
+                        <p>Griefing, stealing, and hacking are allowed. There are no land claims and no bans.</p>
+                    </div>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-inner"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Hardware</h3>
+                        <p>Hosted on high-speed NVMe storage for fast chunk loading. 20 TPS is the goal.</p>
+                    </div>
+                </div>
+
+                <div class="card bento-wide" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-inner"></div>
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div>
+                            <h3>Connection IPs</h3>
+                            <p>You can join the server using any of the following addresses:</p>
+                            <div style="margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                <code style="background: rgba(255,255,255,0.1); padding: 8px; border-radius: 4px; display:block; text-align:center;">mc.trace.rip</code>
+                                <code style="background: rgba(255,255,255,0.1); padding: 8px; border-radius: 4px; display:block; text-align:center;">trace.rip</code>
+                                <code style="background: rgba(255,255,255,0.1); padding: 8px; border-radius: 4px; display:block; text-align:center;">mc.searchub.vip</code>
+                                <code style="background: rgba(255,255,255,0.1); padding: 8px; border-radius: 4px; display:block; text-align:center;">searchub.vip</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="funding" class="funding-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-right">
+                <h2>Funding & Rewards</h2>
+                <p>trace.rip runs on community support. Funds go directly to server upkeep.</p>
+            </div>
+
+            <div class="funding-grid">
+
+                <div class="funding-box" data-aos="fade-right">
+                    <h3 class="box-title">Donation Rewards</h3>
+                    <p class="text-muted">Hosting an anarchy server requires powerful hardware and large storage.</p>
+
+                    <div class="price-tag">$24.00 <span class="sub-price">/ month approx</span></div>
+
+                    <div class="warning-box">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <strong>Shutdown Policy:</strong><br>
+                        If funding stops, the server will be put on worse hardware.
+                    </div>
+                </div>
+
+                <div class="funding-box" data-aos="fade-left">
+                    <h3 class="box-title">Priority Queue</h3>
+
+                    <div class="reward-item">
+                        <div class="reward-icon"><i class="fa-solid fa-image"></i></div>
+                        <div>
+                            <h4 class="reward-title">Server Icon</h4>
+                            <p class="reward-desc">A custom 64x64 .png image displayed in the server list. No gore or illegal content.</p>
+                            <span class="badge">$2.00 USD / 48 Hours</span>
+                        </div>
+                    </div>
+
+                    <div class="reward-item">
+                        <div class="reward-icon"><i class="fa-solid fa-tag"></i></div>
+                        <div>
+                            <h4 class="reward-title">Supporter Rank</h4>
+                            <p class="reward-desc">Gives you 32 render and simulation distance instead of the default 12.</p>
+                            <span class="badge">$10.00 USD / One-time</span>
+                        </div>
+                    </div>
+
+                    <div class="claim-instructions">
+                        <p><strong>How to buy:</strong> Contact through our email <a href="mailto:contact@trace.rip" class="email-link">contact@trace.rip</a> or Discord with what you want to buy.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact & Community</h2>
+                <p>Join the discussion, find a clan, or contact the admins.</p>
+            </div>
+
+           <p class="contact-label">Email:</p>
+            <a href="mailto:contact@trace.rip" class="big-email">
+                contact@trace.rip
+            </a>
+
+            <div class="social-grid">
+
+                <a href="https://discord.gg/CNZzwhUTCm" target="_blank" class="social-card discord" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-brands fa-discord"></i>
+                    <div class="social-info">
+                        <h3>Discord</h3>
+                        <p>Join the server for updates and news about the server.</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/tracerip" target="_blank" class="social-card github" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-brands fa-github"></i>
+                    <div class="social-info">
+                        <h3>GitHub</h3>
+                        <p>View our other projects and change our custom death messages.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 mc.trace.rip. Not affiliated with Mojang.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-check-circle" style="color: #10b981;"></i>
+        IP Copied: mc.trace.rip
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        function copyIp(ip) {
+            const targetIp = ip || "mc.trace.rip"; 
+            
+            navigator.clipboard.writeText(targetIp).then(() => {
+                const toast = document.getElementById('toast');
+                toast.innerHTML = `<i class="fa-solid fa-check-circle" style="color: #10b981;"></i> IP Copied: ${targetIp}`;
+                toast.classList.add('active');
+                setTimeout(() => {
+                    toast.classList.remove('active');
+                }, 3000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
